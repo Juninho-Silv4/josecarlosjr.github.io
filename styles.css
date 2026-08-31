@@ -1,7 +1,7 @@
 /*Configuração da página*/
 
 body {
-    background-color: rgb(231, 74, 74);
+    background-color: rgb(136, 133, 133);
 }
 
 a {
@@ -51,7 +51,16 @@ a:hover {
 }
 
 .container {
-    background-image: linear-gradient( to right, red, orange, yellow, green, turquoise, indigo, violet);
+    background-image: linear-gradient(
+                                        to right, 
+                                        rgba(255, 0, 0, 0.6),       /* red */
+                                        rgba(255, 165, 0, 0.6),     /* orange */
+                                        rgba(255, 255, 0, 0.6),     /* yellow */
+                                        rgba(0, 128, 0, 0.6),       /* green */
+                                        rgba(64, 224, 208, 0.6),    /* turquoise */
+                                        rgba(75, 0, 130, 0.6),      /* indigo */
+                                        rgba(238, 130, 238, 0.6)    /* violet */
+                                        );
     width: 1000px;
     margin: auto;
     vertical-align: middle;
