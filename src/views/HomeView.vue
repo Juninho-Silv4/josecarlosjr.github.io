@@ -1,23 +1,27 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
 </script>
 
 <template>
-  <div>
+  <div class="flex items-center justify-center min-h-screen p-6">
     <button class="btn sm:hidden" popovertarget="my-megamenu-3">Menu</button>
     <div
-      class="megamenu max-sm:megamenu-vertical megamenu-wide p-2 border border-base-300"
+      class="megamenu max-sm:megamenu-vertical megamenu-wide p-2 border border-base-600 min-w-[420px] w-full max-w-[720px]"
       id="my-megamenu-3"
       popover
     >
       <span class="megamenu-active"></span>
 
-      <button popovertarget="c1">One</button>
+      <div class="flex w-full items-center justify-between gap-4 px-10">
+        <button class="btn flex-1 items-center justify-center text-center" popovertarget="c1">Fundamentos</button>
+        <button class="btn flex-1 items-center justify-center text-center" popovertarget="c2">Projetos</button>
+        <button class="btn flex-1 items-center justify-center text-center" popovertarget="c3">Destques</button>
+      </div>
+
       <div id="c1" popover>
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
             <li>
-              <a>Enterprise</a>
+              <a>HTML/CSS</a>
               <ul>
                 <li><a>CRM software</a></li>
                 <li><a>Marketing management</a></li>
@@ -25,30 +29,20 @@ import TheWelcome from '../components/TheWelcome.vue'
                 <li><a>Consulting</a></li>
               </ul>
             </li>
-            <li>
-              <a>Company</a>
-              <ul>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Press kit</a></li>
-              </ul>
-            </li>
           </ul>
           <img
-            src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
+            src="https://png.pngtree.com/png-clipart/20230609/ourmid/pngtree-logo-html-css-icone-and-png-image_7123436.png"
             class="md:max-w-sm max-md:w-auto"
             alt="Tailwind CSS megamenu"
           />
         </div>
       </div>
 
-      <button popovertarget="c2">Two</button>
       <div id="c2" popover>
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
             <li>
-              <a>Enterprise</a>
+              <a>JavaScript / TypeScript</a>
               <ul>
                 <li><a>CRM software</a></li>
                 <li><a>Marketing management</a></li>
@@ -58,27 +52,15 @@ import TheWelcome from '../components/TheWelcome.vue'
                 <li><a>Press kit</a></li>
               </ul>
             </li>
-            <li>
-              <a>Products</a>
-              <ul>
-                <li><a>UI Kit</a></li>
-                <li><a>WordPress themes</a></li>
-                <li><a>WordPress plugins</a></li>
-                <li><a>Color picker app</a></li>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-              </ul>
-            </li>
           </ul>
           <img
-            src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
+            src="https://freesvg.org/img/1486640958.png"
             class="md:max-w-sm max-md:w-auto"
             alt="Tailwind CSS megamenu component"
           />
         </div>
       </div>
 
-      <button popovertarget="c3">Three</button>
       <div id="c3" popover>
         <div class="flex max-sm:flex-col items-start">
           <ul class="menu w-full md:menu-horizontal">
@@ -89,39 +71,6 @@ import TheWelcome from '../components/TheWelcome.vue'
                 <li><a>Development</a></li>
                 <li><a>Hosting</a></li>
                 <li><a>Domain register</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li class="menu-title">Products</li>
-                <li><a>UI Kit</a></li>
-                <li><a>Cloud Platform</a></li>
-                <li><a>Open source</a></li>
-                <li>
-                  <ul>
-                    <li><a>Auth management system</a></li>
-                    <li><a>VScode theme</a></li>
-                    <li><a>Color picker app</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li class="menu-title">Enterprise</li>
-                <li><a>CRM software</a></li>
-                <li><a>Marketing management</a></li>
-                <li><a>Security</a></li>
-                <li><a>Consulting</a></li>
-              </ul>
-            </li>
-            <li>
-              <ul>
-                <li class="menu-title">Company</li>
-                <li><a>About us</a></li>
-                <li><a>Contact us</a></li>
-                <li><a>Privacy policy</a></li>
-                <li><a>Press kit</a></li>
               </ul>
             </li>
           </ul>
