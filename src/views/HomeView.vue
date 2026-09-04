@@ -5,7 +5,13 @@
   const menu = ["Fundamentos", "Projetos", "Destques"];
   const submenu1 = ["HTML/CSS", "JavaScript / TypeScript", "Tailwind CSS", "Vue.js"];
   const submenuAtivo = ref<0 | 1>(0);
-  const imagensSubmenu = [
+  const imgPrincipal = [
+    {
+      src: "https://media.licdn.com/dms/image/v2/D4D03AQHBuThf8gkfKg/profile-displayphoto-shrink_100_100/B4DZWxrxOrH4AU-/0/1742442796803?e=1789603200&v=beta&t=ZP_ux6M5KnFu-bTsR6vsu5hvtQyUg1pgE3S4tEnYNh0",
+      alt: "Foto de perfil do José Carlos Jr",
+    },
+  ]
+  const imagSubmenu = [
     [
       {
         src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
@@ -27,7 +33,7 @@
       },
     ],
   ];
-  const imagemSubmenuAtiva = computed(() => imagensSubmenu[submenuAtivo.value] ?? imagensSubmenu[0]!);
+  const imgSubmenuAtiva = computed(() => imagSubmenu[submenuAtivo.value] ?? imagSubmenu[0]!);
   const menuFund =
   ["Exercício 1: Meu primeiro exercício!",
     "Exercício 2: Parágrafos e quebra de linha!",
@@ -49,12 +55,14 @@
 
 <template>
   <div class="flex min-h-screen items-center justify-center bg-base-100 p-6">
-    <div class="w-full max-w-[900px] rounded-2xl border border-base-300 bg-base-200/80 p-6 shadow-[0_12px_30px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+    <div class="home-card w-full max-w-[900px] min-h-[650px] order border-base-300 p-6 shadow-[0_12px_30px_rgba(0,0,0,0.08)] backdrop-blur-sm">
       <div class="mb-6 flex items-center justify-center gap-4 text-center">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4D03AQHBuThf8gkfKg/profile-displayphoto-shrink_100_100/B4DZWxrxOrH4AU-/0/1742442796803?e=1789603200&v=beta&t=ZP_ux6M5KnFu-bTsR6vsu5hvtQyUg1pgE3S4tEnYNh0"
-          class="h-24 w-24 rounded-full border-2 border-base-300 object-cover shadow-md"
-          alt="José Carlos Jr"
+          v-for="imagem in imgPrincipal"
+          :key="imagem.src"
+          :src="imagem.src"
+          class="shrink-0 rounded-full object-cover"
+          :alt="imagem.alt"
         />
         <p class="text-base font-semibold tracking-wide text-base-content">
           {{ nome }}
@@ -82,8 +90,8 @@
         </div>
 
         <div id="c1" popover>
-          <div class="grid w-full gap-4 md:grid-cols-[minmax(0,1fr)_11rem]">
-            <div class="min-w-0">
+          <div class="grid w-full md:grid-cols-2">
+            <div class="w-full">
               <ul class="menu w-full flex-row flex-nowrap md:menu-horizontal">
                 <li>
                   <a class="justify-center text-center" @click="submenuAtivo = 0">
@@ -97,7 +105,7 @@
                 </li>
               </ul>
 
-              <ul v-if="submenuAtivo === 0" class="menu w-4/5 flex-col">
+              <ul v-if="submenuAtivo === 0" class="menu flex-col">
                 <li><a>{{menuFund[0]}}</a></li>
                 <li><a>{{menuFund[1]}}</a></li>
                 <li><a>{{menuFund[2]}}</a></li>
@@ -107,7 +115,7 @@
                 <li><a>{{menuFund[6]}}</a></li>
                 <li><a>{{menuFund[7]}}</a></li>
               </ul>
-              <ul v-else class="menu w-4/5 flex-col">
+              <ul v-else class="menu flex-col">
                 <li><a>{{menuFund[8]}}</a></li>
                 <li><a>{{menuFund[9]}}</a></li>
                 <li><a>{{menuFund[10]}}</a></li>
@@ -115,9 +123,9 @@
                 <li><a>{{menuFund[12]}}</a></li>
               </ul>
             </div>
-            <div class="flex items-start justify-center gap-2 pt-12">
+            <div class="flex w-1.5/5 items-center justify-center gap-2">
               <img
-                v-for="imagem in imagemSubmenuAtiva"
+                v-for="imagem in imgSubmenuAtiva"
                 :key="imagem.src"
                 :src="imagem.src"
                 class="h-20 w-20 shrink-0 object-contain"

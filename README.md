@@ -46,3 +46,23 @@ npm run build
 ```sh
 npm run lint
 ```
+# ======================================== Notas do projeto ========================================
+
+# Glossário de commit
+
+🧱🔨 - Em construção (Componente pai ainda não finalizado/em execução que está em etapda de desenvolvimento)
+
+# Home I - Instalação, escolha e importação do compenente central do menu
+  Etapa de instalção do Tailwind e do DaisyUI no projeto Vue para atualização do portfólio antigo (em HTML/CSS bruto)
+  Compenente escolhido, importado, instalado e testado: npm run build executado, passou e commit feito pro Git
+
+# Home II - Adição de compenentes ao menu e inicio da personalização
+  Instalando tudo que será necessário e colocando a base de forma bruta sem o uso da sintaxe do Vue para TypeScript (Template Syntax) para ter um panorama geral da página
+
+# Home III - Scripts básicos de eventos no menu
+  Inicio da migração pro Template Syntax e criação dos primeiros eventos de Menu com @click e computed para alteração dinâmica das imagens do submenu 'Fundamentos'
+
+# Home IV - Estilização e identidade visual I
+  Inicio da estilização do menu e da identidade visual planejada
+
+
