@@ -1,3 +1,7 @@
+<script setup lang="ts">
+const baseUrl = import.meta.env.BASE_URL;
+</script>
+
 <template>
   <div class="w-full space-y-4 text-center">
     <h1 class="text-2xl font-bold">Usando links externos</h1>
@@ -23,7 +27,7 @@
       <li>
         <a
           class="link link-primary"
-          href="/exercises/html-css/ex06/ATESTADO_MATRICULA__GRADUACAO2024197.pdf"
+          :href="`${baseUrl}exercises/html-css/ex06/ATESTADO_MATRICULA__GRADUACAO2024197.pdf`"
           download="ATESTADO_MATRICULA__GRADUACAO2024197.pdf"
           type="application/pdf"
         >
@@ -33,7 +37,7 @@
       <li>
         <a
           class="link link-primary"
-          href="/exercises/html-css/ex06/ATESTADO_MATRICULA__GRADUACAO2024197.pdf"
+          :href="`${baseUrl}exercises/html-css/ex06/ATESTADO_MATRICULA__GRADUACAO2024197.pdf`"
           download="meulivro.zip"
           type="application/zip"
         >
