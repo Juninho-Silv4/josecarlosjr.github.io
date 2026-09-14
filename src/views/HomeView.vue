@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { computed, ref } from "vue";
 
+
   const nome = "José Carlos Brás da Silva Júnior";
   const menu = ["Fundamentos", "Projetos", "Destques"];
   const submenu1 = ["HTML/CSS", "JavaScript / TypeScript", "Tailwind CSS", "Vue.js"];
@@ -50,12 +51,11 @@
     "Exercício 5: Analisador de números!",
   ];
 
-
 </script>
 
 <template>
   <div class="flex min-h-screen items-center justify-center bg-base-100 p-6">
-    <div class="home-card w-full max-w-[900px] min-h-[650px] order border-base-300 p-6 shadow-[0_12px_30px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+    <div class="home-card w-full max-w-[900px] min-h-[650px] rounded-2xl border-2 border-black p-6 shadow-[0_16px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm">
       <div class="mb-6 flex items-center justify-center gap-4 text-center">
         <img
           v-for="imagem in imgPrincipal"
@@ -106,21 +106,18 @@
               </ul>
 
               <ul v-if="submenuAtivo === 0" class="menu flex-col">
-                <li><a>{{menuFund[0]}}</a></li>
-                <li><a>{{menuFund[1]}}</a></li>
-                <li><a>{{menuFund[2]}}</a></li>
-                <li><a>{{menuFund[3]}}</a></li>
-                <li><a>{{menuFund[4]}}</a></li>
-                <li><a>{{menuFund[5]}}</a></li>
-                <li><a>{{menuFund[6]}}</a></li>
-                <li><a>{{menuFund[7]}}</a></li>
+                <li v-for="(exercicio, index) in menuFund.slice(0, 8)" :key="exercicio">
+                  <RouterLink :to="{ name: 'html-css-exercicio', params: { exercicio: String(index + 1) } }">
+                    {{ exercicio }}
+                  </RouterLink>
+                </li>
               </ul>
               <ul v-else class="menu flex-col">
-                <li><a>{{menuFund[8]}}</a></li>
-                <li><a>{{menuFund[9]}}</a></li>
-                <li><a>{{menuFund[10]}}</a></li>
-                <li><a>{{menuFund[11]}}</a></li>
-                <li><a>{{menuFund[12]}}</a></li>
+                <li v-for="(exercicio, index) in menuFund.slice(8)" :key="exercicio">
+                  <RouterLink :to="{ name: 'html-css-exercicio', params: { exercicio: String(index + 9) } }">
+                    {{ exercicio }}
+                  </RouterLink>
+                </li>
               </ul>
             </div>
             <div class="flex w-1.5/5 items-center justify-center gap-2">
