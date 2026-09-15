@@ -1,5 +1,9 @@
 <script setup lang="ts">
-const baseUrl = import.meta.env.BASE_URL;
+  defineOptions({
+    name: 'ExercicioSeis',
+  })
+
+  const baseUrl = import.meta.env.BASE_URL;
 </script>
 
 <template>

@@ -4,15 +4,29 @@ import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
 const router = useRouter();
-const totalExercicios = 8;
+
+const configuracaoExercicios = computed(() => {
+  if (route.name === "js-ts-exercicio") {
+    return {
+      total: 5,
+      rota: "js-ts-exercicio",
+    };
+  }
+
+  return {
+    total: 8,
+    rota: "html-css-exercicio",
+  };
+});
 
 const exercicioAtual = computed(() => Number(route.params.exercicio));
 
 function goNext() {
-  const proximoExercicio = (exercicioAtual.value % totalExercicios) + 1;
+  const proximoExercicio =
+    (exercicioAtual.value % configuracaoExercicios.value.total) + 1;
 
   router.push({
-    name: "html-css-exercicio",
+    name: configuracaoExercicios.value.rota,
     params: { exercicio: String(proximoExercicio) },
   });
 }

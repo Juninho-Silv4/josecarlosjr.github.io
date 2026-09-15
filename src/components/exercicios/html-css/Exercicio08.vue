@@ -1,3 +1,9 @@
+<script setup lang="ts">
+  defineOptions({
+    name: 'ExercicioOito',
+  })
+</script>
+
 <template>
   <div
     class="w-full space-y-4 text-center font-sans"

@@ -35,8 +35,8 @@
     ],
   ];
   const imgSubmenuAtiva = computed(() => imagSubmenu[submenuAtivo.value] ?? imagSubmenu[0]!);
-  const menuFund =
-  ["Exercício 1: Meu primeiro exercício!",
+  const exerciciosHtmlCss = [
+    "Exercício 1: Meu primeiro exercício!",
     "Exercício 2: Parágrafos e quebra de linha!",
     "Exercício 3: Testando imagens e favicon!",
     "Exercício 4: Formatação de textos e hierarquia de titulos!",
@@ -44,6 +44,9 @@
     "Exercício 6: Trabalhando com links!",
     "Exercício 7: Mídias em HTML!",
     "Exercício 8: Estilos!",
+  ];
+
+  const exerciciosJsTs = [
     "Exercício 1: Verificador de horário!",
     "Exercício 2: Vereficador de idade!",
     "Exercício 3: Contador!",
@@ -106,15 +109,15 @@
               </ul>
 
               <ul v-if="submenuAtivo === 0" class="menu flex-col">
-                <li v-for="(exercicio, index) in menuFund.slice(0, 8)" :key="exercicio">
+                <li v-for="(exercicio, index) in exerciciosHtmlCss" :key="exercicio">
                   <RouterLink :to="{ name: 'html-css-exercicio', params: { exercicio: String(index + 1) } }">
                     {{ exercicio }}
                   </RouterLink>
                 </li>
               </ul>
               <ul v-else class="menu flex-col">
-                <li v-for="(exercicio, index) in menuFund.slice(8)" :key="exercicio">
-                  <RouterLink :to="{ name: 'html-css-exercicio', params: { exercicio: String(index + 9) } }">
+                <li v-for="(exercicio, index) in exerciciosJsTs" :key="exercicio">
+                  <RouterLink :to="{ name: 'js-ts-exercicio', params: { exercicio: String(index + 1) } }">
                     {{ exercicio }}
                   </RouterLink>
                 </li>

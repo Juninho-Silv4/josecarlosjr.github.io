@@ -1,3 +1,9 @@
+<script setup lang="ts">
+  defineOptions({
+    name: 'ExercicioCinco',
+  })
+</script>
+
 <template>
   <div class="w-full space-y-4 text-center">
     <h1 class="text-2xl font-bold">Trabalhando com listas</h1>

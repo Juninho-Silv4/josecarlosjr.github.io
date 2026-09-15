@@ -18,6 +18,12 @@ const router = createRouter({
       // this generates a separate chunk (HTMLCSS.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
     },
+    {
+      path: "/js-ts/:exercicio",
+      name: "js-ts-exercicio",
+      component: () => import("../views/TSJSView.vue"),
+      props: true,
+    },
   ],
 })
 
