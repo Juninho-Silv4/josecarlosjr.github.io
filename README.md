@@ -80,5 +80,8 @@ npm run lint
 # HTML/CSS II - Adaptando conteudo antigo II
   Finalização da adaptação
 
+# JS/TS I - Adaptação do conteúdo antigo I
+  Adaptando as atividades do curso de JavaScript para o Vue com TypeScript
+
 
 
