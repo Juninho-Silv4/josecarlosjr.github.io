@@ -84,4 +84,10 @@ npm run lint
   Adaptando as atividades do curso de JavaScript para o Vue com TypeScript
 
 
+# JS/TS II - Adaptação do conteúdo antigo II e finalização
+  Finalização da adaptação do conteúdo do curso de JavaScript para o Vue com TypeScript
+
+# Home VI - Finalização da versão 1.0
+  Com a finalização da adaptação dos conteúdos para a nova tecnologia, foi feito os ajustes finais no menu, a componentização do
+  submenu para reaproveitamento e finalização do projeto na versão 1.0, podendo agora inicar o processo de colocar resumos e links de projetos feitos na graduação, como eventuais projetos pessoais.
 
